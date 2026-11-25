@@ -255,6 +255,9 @@ public class LabPImage
      */
     public void setPixelRGBWithTransparency(int x, int y, int r, int g, 
                                             int b, int t) {
+        if (!inImage(x, y)) {
+            return;
+        }
         im.setRGB(x, y, b  + (g << 8)  + (r << 16) + (t << 24));
     }
 
@@ -272,7 +275,7 @@ public class LabPImage
     public void setPixelTransparency(int x, int y, int t) {
         int r = getPixelRed(x, y);
         int g = getPixelGreen(x, y);
-        int b = getPixelGreen(x, y);
+        int b = getPixelBlue(x, y);
         int value =  b  + (g << 8)  + (r << 16) + (t << 24);
         im.setRGB(x, y, value);
         if (im.getRGB(x, y) != value) {

@@ -31,7 +31,7 @@ public class Turtle {
 	posX = 0; posY = 0; direction = 0;
 	up = true;
 	red = 0; green = 0; blue = 0;
-	transparency = 0;
+	transparency = 255;
 	this.im = im;
 	posY = im.getHeight()-1;
     }

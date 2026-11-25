@@ -21,10 +21,10 @@ public class ArvoreJo extends Turtle {
     }
     
     public void arvore1(double tamanho){
-        //desenha tronco
+        // draw the trunk
         genRect(tamanho, tamanho/5);
         
-        //entra em desenho de ramos e folhas
+        // start drawing branches and leaves
         arvore1(tamanho/2, (tamanho/5)/2, this.posX, this.posY, this.direction);
         
     }
@@ -33,16 +33,16 @@ public class ArvoreJo extends Turtle {
         if(largura < 1)
             return;
         else{
-            //imprime rectangulos esquerda
+            // draw left rectangles
             turn(60);
             genRect(tamanho, largura);
             arvore1(tamanho/2, largura/2, this.posX, this.posY, this.direction);
             
-            //volta para o eixo anterior para poder desenhar a da direita
+            // return to the previous axis to draw the right side
             this.posX = prevX;
             this.posY = prevY;
             
-            //imprime rectangulos direita
+            // draw right rectangles
             turn(-60); 
             genRect(tamanho, largura);
             arvore1(tamanho/2, largura/2, this.posX, this.posY, this.direction);
@@ -52,17 +52,17 @@ public class ArvoreJo extends Turtle {
     }
     
     private void genRect(double tamanho, double largura){
-        //levanta pen
+        // lift the pen
         this.penUp();
         
-        //posiciona pen para inicio de desenho
+        // position the pen at the start of the drawing
         this.forward(largura/2);
         this.turn(90);
         this.forward(tamanho);
         this.turn(90);
         this.forward(largura/2);
         
-        //acenta pen e desenha
+        // lower the pen and draw
         this.penDown();
         this.forward(largura/2);
         this.turn(90);

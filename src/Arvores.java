@@ -1,12 +1,9 @@
 import java.util.Random;
 
 /**
- * 
- */
-
-/**
+ * Recursive tree drawing variants used by {@link RunArvores}.
+ *
  * @author antonio
- * 
  */
 public class Arvores extends Turtle {
 	private double numSubRamos;

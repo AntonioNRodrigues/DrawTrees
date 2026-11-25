@@ -1,10 +1,7 @@
 /**
- * 
- */
-
-/**
- * @author Antonio Rodrigues
+ * Final experimental tree variant kept for reference.
  *
+ * @author Antonio Rodrigues
  */
 public class ArvoresFinal extends Turtle{
 

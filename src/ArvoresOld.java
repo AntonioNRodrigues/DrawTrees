@@ -10,13 +10,13 @@ public class ArvoresOld extends Turtle {
 		super(im, x, y);
 		this.x = x;
 		this.y = y;
-		setRed(240); // cor das linhas a laranja
-		super.direction = -90; // direcao inicial para cima
+		setRed(240); // line color is orange
+		super.direction = -90; // initial direction is up
 	}
 
 	public boolean arvore0(double tamanho) {
 
-		if (tamanho < 6.25) {// condicao de paragem
+		if (tamanho < 6.25) {// stopping condition
 			return false;
 		}
 		penDown();
@@ -63,7 +63,7 @@ public class ArvoresOld extends Turtle {
 
 	public boolean arvore1(double tamanho) {
 		double largura = tamanho / 5;
-		if (tamanho < 1) {// condicao de paragem
+		if (tamanho < 1) {// stopping condition
 			return false;
 		}
 		penUp();
